@@ -8,6 +8,8 @@ interface VehicleProperties {
   fuelLevel: number;
   oilLevel: number;
   dirtLevel: number;
+  paintType1: number;
+  paintType2: number;
   color1: number | [number, number, number];
   color2: number | [number, number, number];
   pearlescentColor: number;
@@ -84,10 +86,11 @@ interface VehicleProperties {
   frontBumper: boolean;
   rearBumper: boolean;
   bulletProofTyres: boolean;
+  driftTyres: boolean;
 }
 
 export const getVehicleProperties = (vehicle: number): VehicleProperties =>
   exports.ox_lib.getVehicleProperties(vehicle);
 
-export const setVehicleProperties = (vehicle: number, props: Partial<VehicleProperties>): boolean =>
+export const setVehicleProperties = (vehicle: number, props: Partial<VehicleProperties>, fixVehicle?: boolean): boolean =>
   exports.ox_lib.setVehicleProperties(vehicle, props);
