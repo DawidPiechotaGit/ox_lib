@@ -27,6 +27,8 @@ const useStyles = createStyles((theme, params: { disabled?: boolean }) => ({
     height: 'fit-content',
     width: '100%',
     padding: 10,
+    borderRadius: 0,
+    background: `radial-gradient(#36495ed0, #1a1f24d0);`,
   },
   iconImage: {
     maxWidth: '25px',
@@ -34,12 +36,14 @@ const useStyles = createStyles((theme, params: { disabled?: boolean }) => ({
   description: {
     color: params.disabled ? theme.colors.dark[3] : theme.colors.dark[2],
     fontSize: 12,
+    fontFamily: 'Rajdhani',
   },
   dropdown: {
     padding: 10,
     color: theme.colors.dark[0],
     fontSize: 14,
     maxWidth: 256,
+    fontFamily: 'Rajdhani',
     width: 'fit-content',
     border: 'none',
   },
@@ -59,6 +63,7 @@ const useStyles = createStyles((theme, params: { disabled?: boolean }) => ({
   },
   buttonTitleText: {
     overflowWrap: 'break-word',
+    fontFamily: 'Rajdhani',
   },
   buttonArrowContainer: {
     justifyContent: 'center',

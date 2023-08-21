@@ -27,14 +27,17 @@ const useStyles = createStyles((theme) => ({
     gap: 6,
   },
   titleContainer: {
-    borderRadius: 4,
+    borderRadius: 0,
     flex: '1 85%',
-    backgroundColor: theme.colors.dark[6],
+    // backgroundColor: theme.colors.dark[6],
+    background: `radial-gradient(#36495ed0, #1a1f24d0);`,
   },
   titleText: {
     color: theme.colors.dark[0],
     padding: 6,
     textAlign: 'center',
+    fontFamily: 'Rajdhani',
+    fontWeight: `bold`,
   },
   buttonsContainer: {
     height: 560,
