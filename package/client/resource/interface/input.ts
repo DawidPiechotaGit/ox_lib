@@ -29,6 +29,7 @@ interface InputDialogRowProps {
   step?: number;
   required?: boolean;
   format?: string;
+  returnString?: boolean;
   description?: string;
 }
 
@@ -41,4 +42,4 @@ type inputDialog = (
 ) => Promise<Array<string | number | boolean> | undefined>;
 export const inputDialog: inputDialog = async (heading, rows) => await exports.ox_lib.inputDialog(heading, rows);
 
-export const closeInputDialog = () => exports.ox_lib.inputDialog();
+export const closeInputDialog = () => exports.ox_lib.closeInputDialog();
