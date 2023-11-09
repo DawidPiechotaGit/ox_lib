@@ -110,25 +110,27 @@ const ContextButton: React.FC<{
           >
             <Group position="apart" w="100%" noWrap>
               <Stack className={classes.buttonStack}>
-                <Group className={classes.buttonGroup}>
-                  {button?.icon && (
-                    <Stack className={classes.buttonIconContainer}>
-                      {typeof button.icon === 'string' && isIconUrl(button.icon) ? (
-                        <img src={button.icon} className={classes.iconImage} alt="Missing img" />
-                      ) : (
-                        <FontAwesomeIcon
-                          icon={button.icon as IconProp}
-                          fixedWidth
-                          size="lg"
-                          style={{ color: button.iconColor }}
-                        />
-                      )}
-                    </Stack>
-                  )}
-                  <Text className={classes.buttonTitleText}>
-                    <ReactMarkdown components={MarkdownComponents}>{button.title || buttonKey}</ReactMarkdown>
-                  </Text>
-                </Group>
+                {(button.title || Number.isNaN(+buttonKey)) && (
+                  <Group className={classes.buttonGroup}>
+                    {button?.icon && (
+                      <Stack className={classes.buttonIconContainer}>
+                        {typeof button.icon === 'string' && isIconUrl(button.icon) ? (
+                          <img src={button.icon} className={classes.iconImage} alt="Missing img" />
+                        ) : (
+                          <FontAwesomeIcon
+                            icon={button.icon as IconProp}
+                            fixedWidth
+                            size="lg"
+                            style={{ color: button.iconColor }}
+                          />
+                        )}
+                      </Stack>
+                    )}
+                    <Text className={classes.buttonTitleText}>
+                      <ReactMarkdown components={MarkdownComponents}>{button.title || buttonKey}</ReactMarkdown>
+                    </Text>
+                  </Group>
+                )}
                 {button.description && (
                   <Text className={classes.description}>
                     <ReactMarkdown components={MarkdownComponents}>{button.description}</ReactMarkdown>
@@ -150,14 +152,21 @@ const ContextButton: React.FC<{
           {button.image && <Image src={button.image} />}
           {Array.isArray(button.metadata) ? (
             button.metadata.map(
-              (metadata: string | { label: string; value?: any; progress?: number }, index: number) => (
+              (
+                metadata: string | { label: string; value?: any; progress?: number; colorScheme?: string },
+                index: number
+              ) => (
                 <>
                   <Text key={`context-metadata-${index}`}>
                     {typeof metadata === 'string' ? `${metadata}` : `${metadata.label}: ${metadata?.value ?? ''}`}
                   </Text>
 
                   {typeof metadata === 'object' && metadata.progress !== undefined && (
-                    <Progress value={metadata.progress} size="sm" color={button.colorScheme || 'dark.3'} />
+                    <Progress
+                      value={metadata.progress}
+                      size="sm"
+                      color={metadata.colorScheme || button.colorScheme || 'dark.3'}
+                    />
                   )}
                 </>
               )
