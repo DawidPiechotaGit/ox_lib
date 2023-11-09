@@ -30,6 +30,7 @@ const useStyles = createStyles((theme, params: { position?: TextUiPosition }) =>
     fontWeight: 500,
     borderRadius: theme.radius.sm,
     boxShadow: theme.shadows.sm,
+    color: 'white',
   },
 }));
 

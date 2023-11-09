@@ -13,13 +13,13 @@ const useStyles = createStyles((theme) => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
+    fontFamily: 'Rajdhani',
   },
   sector: {
-    fill: theme.colors.dark[6],
-    color: theme.colors.dark[0],
-
+    fill: '#36495ed0',
+    color: '#fff',
     '&:hover': {
-      fill: theme.fn.primaryColor(),
+      fill: '#1a1f24d0',
       '> g > text, > g > svg > path': {
         fill: '#fff',
       },
@@ -32,12 +32,12 @@ const useStyles = createStyles((theme) => ({
     fill: theme.colors.dark[6],
   },
   centerCircle: {
-    fill: theme.fn.primaryColor(),
+    fill: '#36495ed0',
     color: '#fff',
     stroke: theme.colors.dark[6],
-    strokeWidth: 4,
+    strokeWidth: 2,
     '&:hover': {
-      fill: theme.colors[theme.primaryColor][theme.fn.primaryShade() - 1],
+      fill: '#1a1f24d0',
     },
   },
   centerIconContainer: {
@@ -81,18 +81,23 @@ const RadialMenu: React.FC = () => {
 
   useEffect(() => {
     if (menu.items.length <= PAGE_ITEMS) return setMenuItems(menu.items);
-    const items = menu.items.slice(PAGE_ITEMS * (menu.page - 1) - (menu.page - 1), PAGE_ITEMS * menu.page - menu.page + 1);
+    const items = menu.items.slice(
+      PAGE_ITEMS * (menu.page - 1) - (menu.page - 1),
+      PAGE_ITEMS * menu.page - menu.page + 1
+    );
     if (PAGE_ITEMS * menu.page - menu.page + 1 < menu.items.length) {
       items[items.length - 1] = { icon: 'ellipsis-h', label: locale.ui.more, isMore: true };
     }
     setMenuItems(items);
   }, [menu.items, menu.page]);
 
-  useNuiEvent('openRadialMenu', async (data: { items: RadialMenuItem[]; sub?: boolean, option?: string } | false) => {
+  useNuiEvent('openRadialMenu', async (data: { items: RadialMenuItem[]; sub?: boolean; option?: string } | false) => {
     if (!data) return setVisible(false);
     let initialPage = 1;
     if (data.option) {
-      data.items.findIndex((item, index) => item.menu == data.option && (initialPage = Math.floor(index / PAGE_ITEMS) + 1));
+      data.items.findIndex(
+        (item, index) => item.menu == data.option && (initialPage = Math.floor(index / PAGE_ITEMS) + 1)
+      );
     }
     setMenu({ ...data, page: initialPage });
     setVisible(true);
@@ -134,7 +139,8 @@ const RadialMenu: React.FC = () => {
                     transform={`rotate(-${index * pieAngle} 175 175) translate(${sinAngle * gap}, ${cosAngle * gap})`}
                     className={classes.sector}
                     onClick={async () => {
-                      const clickIndex = menu.page === 1 ? index : PAGE_ITEMS * (menu.page - 1) - (menu.page - 1) + index;
+                      const clickIndex =
+                        menu.page === 1 ? index : PAGE_ITEMS * (menu.page - 1) - (menu.page - 1) + index;
                       if (!item.isMore) fetchNui('radialClick', clickIndex);
                       else {
                         await changePage(true);
@@ -155,11 +161,20 @@ const RadialMenu: React.FC = () => {
                         height={25}
                         fixedWidth
                       />
-                      <text x={iconX} y={iconY + (item.label.includes("  \n") ? 7 : 25)} fill="#fff" textAnchor="middle" pointerEvents="none">
-                        {item.label.includes("  \n")
-                          ? item.label.split("  \n").map((value) => <tspan x={iconX} dy="1.2em">{value}</tspan>)
-                          : item.label
-                        }
+                      <text
+                        x={iconX}
+                        y={iconY + (item.label.includes('  \n') ? 7 : 25)}
+                        fill="#fff"
+                        textAnchor="middle"
+                        pointerEvents="none"
+                      >
+                        {item.label.includes('  \n')
+                          ? item.label.split('  \n').map((value) => (
+                              <tspan x={iconX} dy="1.2em">
+                                {value}
+                              </tspan>
+                            ))
+                          : item.label}
                       </text>
                     </g>
                   </g>
