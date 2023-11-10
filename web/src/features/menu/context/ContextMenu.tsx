@@ -28,10 +28,11 @@ const useStyles = createStyles((theme) => ({
     gap: 6,
   },
   titleContainer: {
-    borderRadius: 0,
+    borderRadius: theme.radius.sm,
     flex: '1 85%',
     // backgroundColor: theme.colors.dark[6],
-    background: `radial-gradient(#36495ed0, #1a1f24d0);`,
+    // background: `radial-gradient(#36495ed0, #1a1f24d0);`,
+    background: 'linear-gradient( 109deg, #1a1f24d0 25%, #36495ed0 75%)',
   },
   titleText: {
     color: theme.colors.dark[0],

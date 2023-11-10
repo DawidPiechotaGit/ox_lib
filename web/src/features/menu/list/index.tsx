@@ -11,8 +11,9 @@ import type { MenuPosition, MenuSettings } from '../../../typings';
 
 const useStyles = createStyles((theme, params: { position?: MenuPosition; itemCount: number; selected: number }) => ({
   tooltip: {
-    backgroundColor: theme.colors.dark[6],
-    color: theme.colors.dark[2],
+    background: 'linear-gradient( 109deg, #1a1f24d0 25%, #36495ed0 75%)',
+    // color: theme.colors.dark[2],
+    color: 'white',
     borderRadius: theme.radius.sm,
     maxWidth: 350,
     whiteSpace: 'normal',
@@ -35,19 +36,21 @@ const useStyles = createStyles((theme, params: { position?: MenuPosition; itemCo
     maxHeight: 415,
     overflow: 'hidden',
     borderRadius: params.itemCount <= 6 || params.selected === params.itemCount - 1 ? theme.radius.md : undefined,
-    backgroundColor: theme.colors.dark[8],
+    // background: 'linear-gradient( 109deg, #1a1f24d0 25%, #36495ed0 75%)',
+    backgroundColor: 'transparent',
     borderTopLeftRadius: 0,
     borderTopRightRadius: 0,
   },
   scrollArrow: {
-    backgroundColor: theme.colors.dark[8],
+    // backgroundColor: theme.colors.dark[8],
+    backgroundColor: 'transparent',
     textAlign: 'center',
     borderBottomLeftRadius: theme.radius.md,
     borderBottomRightRadius: theme.radius.md,
     height: 25,
   },
   scrollArrowIcon: {
-    color: theme.colors.dark[2],
+    color: 'white',
     fontSize: 20,
   },
 }));
