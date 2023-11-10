@@ -23,13 +23,17 @@ const useStyles = createStyles((theme, params: { position?: TextUiPosition }) =>
     padding: 12,
     margin: 8,
     // backgroundColor: theme.colors.dark[6],
-    background: `radial-gradient(#36495ed0, #1a1f24d0);`,
+    backgroundColor: 'rgba(0, 99, 160, 0.13)',
+    // background: `radial-gradient(#36495ed0, #1a1f24d0);`,
+    backdropFilter: 'blur(5px)',
     color: 'white',
     // fontFamily: 'Roboto',
     fontFamily: 'Rajdhani',
     fontWeight: 500,
     borderRadius: theme.radius.sm,
     boxShadow: theme.shadows.sm,
+    border: 'solid 1px rgba(180, 180, 180, 1)',
+    letterSpacing: '0.04em',
   },
 }));
 
