@@ -30,10 +30,11 @@ const useStyles = createStyles((theme, params: { disabled?: boolean; readOnly?: 
     width: '100%',
     padding: 10,
     borderRadius: theme.radius.sm,
+    // border: 'solid 1px #ffff5b',
     // background: `radial-gradient(#36495ed0, #1a1f24d0);`,
-    background: 'linear-gradient( 109deg, #1a1f24d0 25%, #36495ed0 75%)',
+    background: 'linear-gradient( 90deg, #9d015b90 98%, #f8ab3c90 98%)',
     '&:hover': {
-      backgroundColor: params.readOnly ? theme.colors.dark[6] : undefined,
+      backgroundColor: params.readOnly ? theme.colors.dark[9] : undefined,
       cursor: params.readOnly ? 'unset' : 'pointer',
     },
     '&:active': {
@@ -47,14 +48,16 @@ const useStyles = createStyles((theme, params: { disabled?: boolean; readOnly?: 
     // color: params.disabled ? theme.colors.dark[3] : theme.colors.dark[2],
     color: 'white',
     fontSize: 12,
-    fontFamily: 'Rajdhani',
+    // fontFamily: 'Rajdhani',
+    fontFamily: 'Nova Square',
   },
   dropdown: {
     padding: 10,
     color: theme.colors.dark[0],
     fontSize: 14,
     maxWidth: 256,
-    fontFamily: 'Rajdhani',
+    // fontFamily: 'Rajdhani',
+    fontFamily: 'Nova Square',
     width: 'fit-content',
     border: 'none',
   },
@@ -74,7 +77,8 @@ const useStyles = createStyles((theme, params: { disabled?: boolean; readOnly?: 
   },
   buttonTitleText: {
     overflowWrap: 'break-word',
-    fontFamily: 'Rajdhani',
+    // fontFamily: 'Rajdhani',
+    fontFamily: 'Nova Square',
   },
   buttonArrowContainer: {
     justifyContent: 'center',

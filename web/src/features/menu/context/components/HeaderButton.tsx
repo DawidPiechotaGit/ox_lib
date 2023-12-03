@@ -18,7 +18,8 @@ const useStyles = createStyles((theme, params: { canClose?: boolean }) => ({
     textAlign: 'center',
     justifyContent: 'center',
     padding: 2,
-    background: `radial-gradient(#36495ed0, #1a1f24d0);`,
+    // background: `radial-gradient(#36495ed0, #1a1f24d0);`,
+    background: '#f8ab3c90',
     // background: 'linear-gradient( 109deg, #1a1f24d0 25%, #36495ed0 75%)',
   },
   root: {

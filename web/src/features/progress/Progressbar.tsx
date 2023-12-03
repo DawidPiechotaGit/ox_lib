@@ -9,11 +9,10 @@ const useStyles = createStyles((theme) => ({
   container: {
     width: 500,
     height: 8,
-    borderRadius: 0,
+    borderRadius: '40px',
     // backgroundColor: theme.colors.dark[5],
-    backgroundColor: 'rgba(201,201,201,0.3)',
+    backgroundColor: 'rgba(247,169,60,0.1)',
     overflow: 'hidden',
-    transform: 'skew(-30deg)',
   },
   wrapper: {
     width: '100%',
@@ -26,10 +25,11 @@ const useStyles = createStyles((theme) => ({
   },
   bar: {
     height: '4000%',
-    backgroundColor: theme.colors[theme.primaryColor][theme.fn.primaryShade()],
+    // backgroundColor: theme.colors[theme.primaryColor][theme.fn.primaryShade()],
+    backgroundColor: 'rgba(164,1,93,255)',
     // -webkit-box-shadow:0px 0px 30px 0px rgba(25,170,202,1),
     // -moz-box-shadow: 0px 0px 30px 0px rgba(25,170,202,1),
-    boxShadow: '0px 0px 15px 0px rgba(25,170,202,1)',
+    boxShadow: '0px 0px 15px 0px rgba(164,1,93,255)',
   },
   labelWrapper: {
     position: 'absolute',
@@ -41,14 +41,15 @@ const useStyles = createStyles((theme) => ({
   },
   label: {
     maxWidth: 500,
-    padding: 8,
+    padding: 25,
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     whiteSpace: 'nowrap',
     fontSize: 16,
     color: theme.colors.gray[3],
     textShadow: theme.shadows.sm,
-    fontFamily: 'Rajdhani',
+    // fontFamily: 'Rajdhani',
+    fontFamily: 'Nova Square',
     textTransform: 'uppercase',
   },
 }));
@@ -74,16 +75,18 @@ const Progressbar: React.FC = () => {
           <Box className={classes.labelWrapper}>
             <Text className={classes.label}>{label}</Text>
           </Box>
-          <Box className={classes.container}>
-            <Box
-              className={classes.bar}
-              onAnimationEnd={() => setVisible(false)}
-              sx={{
-                animation: 'progress-bar linear',
-                animationDuration: `${duration}ms`,
-              }}
-            ></Box>
-          </Box>
+          <div style={{ borderRadius: '36px', padding: '5px', backgroundColor: '#2f0926' }}>
+            <Box className={classes.container}>
+              <Box
+                className={classes.bar}
+                onAnimationEnd={() => setVisible(false)}
+                sx={{
+                  animation: 'progress-bar linear',
+                  animationDuration: `${duration}ms`,
+                }}
+              ></Box>
+            </Box>
+          </div>
         </ScaleFade>
       </Box>
     </>

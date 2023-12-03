@@ -14,7 +14,7 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: 'rgba(0, 99, 160, 0.13)',
     // background: `radial-gradient(#36495ed0, #1a1f24d0);`,
     background: 'linear-gradient( 109deg, #1a1f24d0 30%, #36495ed0 75%)',
-    color: theme.colors.dark[0],
+    color: 'white',
     padding: 10,
     borderRadius: theme.radius.sm,
     // fontFamily: 'Roboto',
@@ -34,6 +34,7 @@ const useStyles = createStyles((theme) => ({
     // fontFamily: 'Roboto',
     fontFamily: 'Rajdhani',
     lineHeight: 'normal',
+    fontWeight: 700,
   },
   descriptionOnly: {
     fontSize: 14,
