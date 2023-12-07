@@ -17,7 +17,7 @@ const useStyles = createStyles((theme) => ({
   heading: {
     fontSize: 24,
     textTransform: 'uppercase',
-    fontWeight: 500,
+    fontWeight: 400,
   },
 }));
 

@@ -21,15 +21,17 @@ const useStyles = createStyles((theme, params: { position?: MenuPosition; itemCo
   container: {
     position: 'absolute',
     pointerEvents: 'none',
-    marginTop: params.position === 'top-left' || params.position === 'top-right' ? 5 : 0,
-    marginLeft: params.position === 'top-left' || params.position === 'bottom-left' ? 5 : 0,
-    marginRight: params.position === 'top-right' || params.position === 'bottom-right' ? 5 : 0,
-    marginBottom: params.position === 'bottom-left' || params.position === 'bottom-right' ? 5 : 0,
+    marginTop: params.position === 'top-left' || params.position === 'top-right' ? 70 : 0,
+    marginLeft: params.position === 'top-left' || params.position === 'bottom-left' ? 70 : 0,
+    marginRight: params.position === 'top-right' || params.position === 'bottom-right' ? 70 : 0,
+    marginBottom: params.position === 'bottom-left' || params.position === 'bottom-right' ? 70 : 0,
     right: params.position === 'top-right' || params.position === 'bottom-right' ? 1 : undefined,
     left: params.position === 'bottom-left' ? 1 : undefined,
     bottom: params.position === 'bottom-left' || params.position === 'bottom-right' ? 1 : undefined,
-    fontFamily: 'Roboto',
+    fontFamily: 'Inter',
     width: 384,
+    background: '#36495ed0',
+    borderRadius: '5px',
   },
   buttonsWrapper: {
     height: 'fit-content',
@@ -220,6 +222,22 @@ const ListMenu: React.FC = () => {
           classNames={{ tooltip: classes.tooltip }}
         >
           <Box className={classes.container}>
+            <div
+              style={{
+                width: '135px',
+                position: 'absolute',
+                left: '-4.5vh',
+                top: '-2vh',
+                backgroundColor: '#1a1f24d0',
+                height: '70px',
+                borderRadius: '10px',
+                transform: 'skew(-25deg)',
+              }}
+            ></div>
+            <img
+              src="https://i.imgur.com/nsx4H77.png"
+              style={{ width: '150px', position: 'absolute', left: '-5.5vh', top: '-2vh' }}
+            ></img>
             <Header title={menu.title} />
             <Box className={classes.buttonsWrapper} onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => moveMenu(e)}>
               <FocusTrap active={visible}>
