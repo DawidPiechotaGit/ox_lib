@@ -1,11 +1,11 @@
 import { Box, createStyles } from '@mantine/core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { useNuiEvent } from '../../../hooks/useNuiEvent';
 import { fetchNui } from '../../../utils/fetchNui';
 import ScaleFade from '../../../transitions/ScaleFade';
 import type { RadialMenuItem } from '../../../typings';
 import { useLocales } from '../../../providers/LocaleProvider';
+import LibIcon from '../../../components/LibIcon';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -153,14 +153,7 @@ const RadialMenu: React.FC = () => {
                       }, ${175 + (175 - gap) * Math.sin(-degToRad(pieAngle))} z`}
                     />
                     <g transform={`rotate(${index * pieAngle - 90} ${iconX} ${iconY})`} pointerEvents="none">
-                      <FontAwesomeIcon
-                        x={iconX - 12.5}
-                        y={iconY - 17.5}
-                        icon={item.icon}
-                        width={25}
-                        height={25}
-                        fixedWidth
-                      />
+                      <LibIcon x={iconX - 12.5} y={iconY - 17.5} icon={item.icon} width={25} height={25} fixedWidth />
                       <text
                         x={iconX}
                         y={iconY + (item.label.includes('  \n') ? 7 : 25)}
@@ -198,7 +191,7 @@ const RadialMenu: React.FC = () => {
             </g>
           </svg>
           <div className={classes.centerIconContainer}>
-            <FontAwesomeIcon
+            <LibIcon
               icon={!menu.sub && menu.page < 2 ? 'xmark' : 'arrow-rotate-left'}
               fixedWidth
               className={classes.centerIcon}

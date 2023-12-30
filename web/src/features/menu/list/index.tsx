@@ -1,13 +1,12 @@
 import { Box, createStyles, Stack, Tooltip } from '@mantine/core';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useNuiEvent } from '../../../hooks/useNuiEvent';
 import ListItem from './ListItem';
 import Header from './Header';
 import FocusTrap from 'focus-trap-react';
 import { fetchNui } from '../../../utils/fetchNui';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
 import type { MenuPosition, MenuSettings } from '../../../typings';
+import LibIcon from '../../../components/LibIcon';
 
 const useStyles = createStyles((theme, params: { position?: MenuPosition; itemCount: number; selected: number }) => ({
   tooltip: {
@@ -260,7 +259,7 @@ const ListMenu: React.FC = () => {
             </Box>
             {menu.items.length > 6 && selected !== menu.items.length - 1 && (
               <Box className={classes.scrollArrow}>
-                <FontAwesomeIcon icon="chevron-down" className={classes.scrollArrowIcon} />
+                <LibIcon icon="chevron-down" className={classes.scrollArrowIcon} />
               </Box>
             )}
           </Box>
