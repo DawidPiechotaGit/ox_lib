@@ -13,7 +13,7 @@ const useStyles = createStyles((theme) => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    fontFamily: 'Rajdhani',
+    fontFamily: 'Teko',
   },
   sector: {
     fill: '#36495ed0',

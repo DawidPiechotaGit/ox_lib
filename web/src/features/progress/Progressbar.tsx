@@ -48,7 +48,7 @@ const useStyles = createStyles((theme) => ({
     fontSize: 16,
     color: theme.colors.gray[3],
     textShadow: theme.shadows.sm,
-    fontFamily: 'Rajdhani',
+    fontFamily: 'Teko',
     textTransform: 'uppercase',
   },
 }));

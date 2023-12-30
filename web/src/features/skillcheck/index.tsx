@@ -25,16 +25,16 @@ const useStyles = createStyles((theme) => ({
   track: {
     fill: 'transparent',
     stroke: theme.colors.dark[5],
-    strokeWidth: 8,
+    strokeWidth: 15,
   },
   skillArea: {
     fill: 'transparent',
-    stroke: theme.fn.primaryColor(),
-    strokeWidth: 8,
+    stroke: '#19abca',
+    strokeWidth: 12,
   },
   indicator: {
     stroke: 'red',
-    strokeWidth: 16,
+    strokeWidth: 25,
     fill: 'transparent',
   },
   button: {
@@ -43,12 +43,13 @@ const useStyles = createStyles((theme) => ({
     top: '50%',
     transform: 'translate(-50%, -50%)',
     backgroundColor: theme.colors.dark[5],
-    width: 25,
-    height: 25,
+    width: 35,
+    height: 35,
     textAlign: 'center',
     borderRadius: 5,
-    fontSize: 16,
-    fontWeight: 500,
+    fontSize: 24,
+    fontWeight: 400,
+    color: '#19abca',
   },
 }));
 

@@ -18,7 +18,7 @@ const SliderField: React.FC<Props> = (props) => {
 
   return (
     <Box>
-      <Text sx={{ fontSize: 14, fontWeight: 500 }}>{props.row.label}</Text>
+      <Text sx={{ fontSize: 14, fontWeight: 400 }}>{props.row.label}</Text>
       <Slider
         mb={10}
         value={controller.field.value}

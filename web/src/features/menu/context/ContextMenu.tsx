@@ -35,11 +35,13 @@ const useStyles = createStyles((theme) => ({
     background: 'linear-gradient( 109deg, #1a1f24d0 25%, #36495ed0 75%)',
   },
   titleText: {
-    color: theme.colors.dark[0],
+    color: 'white',
     padding: 6,
     textAlign: 'center',
-    fontFamily: 'Rajdhani',
-    fontWeight: `bold`,
+    fontFamily: 'Teko',
+    fontSize: '20px',
+    textTransform: 'uppercase',
+    // fontWeight: `bold`,
   },
   buttonsContainer: {
     height: 560,
@@ -91,6 +93,22 @@ const ContextMenu: React.FC = () => {
   return (
     <Box className={classes.container}>
       <ScaleFade visible={visible}>
+        {/* <div
+          style={{
+            width: '100px',
+            position: 'absolute',
+            left: '-0.5vh',
+            top: '-1vh',
+            backgroundColor: '#36495e',
+            height: '50px',
+            borderRadius: '5px',
+            transform: 'skew(-25deg)',
+          }}
+        ></div>
+        <img
+          src="https://i.imgur.com/nsx4H77.png"
+          style={{ width: '120px', position: 'absolute', left: '-1.5vh', top: '-1.3vh' }}
+        ></img> */}
         <Flex className={classes.header}>
           {contextMenu.menu && (
             <HeaderButton icon="chevron-left" iconSize={16} handleClick={() => openMenu(contextMenu.menu)} />

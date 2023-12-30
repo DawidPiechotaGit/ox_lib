@@ -30,8 +30,8 @@ const useStyles = createStyles((theme, params: { position?: MenuPosition; itemCo
     bottom: params.position === 'bottom-left' || params.position === 'bottom-right' ? 1 : undefined,
     fontFamily: 'Inter',
     width: 384,
-    background: '#36495ed0',
-    borderRadius: '5px',
+    // background: '#48525c90',
+    borderRadius: theme.radius.sm,
   },
   buttonsWrapper: {
     height: 'fit-content',
@@ -222,13 +222,13 @@ const ListMenu: React.FC = () => {
           classNames={{ tooltip: classes.tooltip }}
         >
           <Box className={classes.container}>
-            <div
+            {/* <div
               style={{
                 width: '135px',
                 position: 'absolute',
                 left: '-4.5vh',
                 top: '-2vh',
-                backgroundColor: '#1a1f24d0',
+                backgroundColor: '#1a1f24',
                 height: '70px',
                 borderRadius: '10px',
                 transform: 'skew(-25deg)',
@@ -237,11 +237,11 @@ const ListMenu: React.FC = () => {
             <img
               src="https://i.imgur.com/nsx4H77.png"
               style={{ width: '150px', position: 'absolute', left: '-5.5vh', top: '-2vh' }}
-            ></img>
+            ></img> */}
             <Header title={menu.title} />
             <Box className={classes.buttonsWrapper} onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => moveMenu(e)}>
               <FocusTrap active={visible}>
-                <Stack spacing={8} p={8} sx={{ overflowY: 'scroll' }}>
+                <Stack spacing={3} p={8} sx={{ overflowY: 'scroll' }}>
                   {menu.items.map((item, index) => (
                     <React.Fragment key={`menu-item-${index}`}>
                       {item.label && (

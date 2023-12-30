@@ -24,12 +24,13 @@ const useStyles = createStyles((theme, params: { position?: TextUiPosition }) =>
     margin: 8,
     // background: `radial-gradient(#36495ed0, #1a1f24d0);`,
     color: 'white',
-    fontFamily: 'Rajdhani',
-    fontWeight: 500,
-    borderRadius: '3px',
+    fontFamily: 'Teko',
+    fontWeight: 400,
+    borderRadius: '4px',
     boxShadow: theme.shadows.sm,
     letterSpacing: '0.04em',
     background: 'linear-gradient( 109deg, #1a1f24d0 30%, #36495ed0 75%)',
+    // background: 'linear-gradient(90deg, rgba(52,174,203,1) 0%, rgba(52,174,203,1) 2%, rgba(26,51,64,1) 2%)',
   },
 }));
 

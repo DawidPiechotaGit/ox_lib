@@ -17,7 +17,7 @@ interface Props {
 const useStyles = createStyles((theme, params: { iconColor?: string }) => ({
   buttonContainer: {
     background: 'linear-gradient( 109deg, #1a1f24d0 25%, #36495ed0 75%)',
-    borderRadius: theme.radius.md,
+    borderRadius: theme.radius.sm,
     padding: 2,
     height: 60,
     scrollMargin: 8,
