@@ -13,17 +13,61 @@ const useStyles = createStyles((theme) => ({
     height: 'fit-content',
     backgroundColor: 'rgba(0, 99, 160, 0.13)',
     // background: `radial-gradient(#36495ed0, #1a1f24d0);`,
-    background: 'linear-gradient( 109deg, #1a1f24d0 30%, #36495ed0 75%)',
+    // background: 'linear-gradient( 109deg, #1a1f24d0 30%, #36495ed0 75%)',
+    background: 'radial-gradient(circle, rgba(12,30,42,0.8743872549019608) 3%, rgba(11,39,53,0.9108018207282913) 81%)',
     color: theme.colors.dark[0],
-    padding: 20,
+    padding: 5,
     borderRadius: theme.radius.sm,
-    // fontFamily: 'Roboto',
-    fontFamily: 'Teko',
+    // fontFamily: 'Teko',
+    fontFamily: 'Roboto',
     boxShadow: theme.shadows.sm,
-    letterSpacing: '0.04em',
+    // letterSpacing: '0.04em',
+  },
+  containerGreen: {
+    width: 300,
+    height: 'fit-content',
+    backgroundColor: 'rgba(0, 99, 160, 0.13)',
+    // background: `radial-gradient(#36495ed0, #1a1f24d0);`,
+    // background: 'linear-gradient( 109deg, #1a1f24d0 30%, #36495ed0 75%)',
+    background: 'radial-gradient(circle, rgba(12,42,37,0.8743872549019608) 3%, rgba(11,53,45,0.9108018207282913) 81%)',
+    color: theme.colors.dark[0],
+    padding: 5,
+    borderRadius: theme.radius.sm,
+    // fontFamily: 'Teko',
+    fontFamily: 'Roboto',
+    boxShadow: theme.shadows.sm,
+    // letterSpacing: '0.04em',
+  },
+  containerRed: {
+    width: 300,
+    height: 'fit-content',
+    backgroundColor: 'rgba(0, 99, 160, 0.13)',
+    background: 'radial-gradient(circle, rgba(42,12,12,0.8743872549019608) 3%, rgba(53,11,11,0.9108018207282913) 81%)',
+    color: theme.colors.dark[0],
+    padding: 5,
+    borderRadius: theme.radius.sm,
+    // fontFamily: 'Teko',
+    fontFamily: 'Roboto',
+    boxShadow: theme.shadows.sm,
+    // letterSpacing: '0.04em',
+  },
+  containerYellow: {
+    width: 300,
+    height: 'fit-content',
+    backgroundColor: 'rgba(0, 99, 160, 0.13)',
+    background:
+      'radial-gradient(circle, rgba(174,179,31,0.8743872549019608) 3%, rgba(184,187,34,0.9108018207282913) 81%)',
+    color: theme.colors.dark[0],
+    padding: 5,
+    borderRadius: theme.radius.sm,
+    // fontFamily: 'Teko',
+    fontFamily: 'Roboto',
+    boxShadow: theme.shadows.sm,
+    // letterSpacing: '0.04em',
   },
   title: {
-    fontFamily: 'Teko',
+    fontSize: 15,
+    fontFamily: 'Roboto',
     fontWeight: 400,
     lineHeight: 'normal',
     color: 'white',
@@ -31,15 +75,15 @@ const useStyles = createStyles((theme) => ({
   description: {
     fontSize: 12,
     color: 'white',
-    // fontFamily: 'Roboto',
-    fontFamily: 'Teko',
+    // fontFamily: 'Teko',
+    fontFamily: 'Roboto',
     lineHeight: 'normal',
   },
   descriptionOnly: {
-    fontSize: 14,
+    fontSize: 12,
     color: 'white',
-    // fontFamily: 'Roboto',
-    fontFamily: 'Teko',
+    // fontFamily: 'Teko',
+    fontFamily: 'Roboto',
     lineHeight: 'normal',
   },
 }));
@@ -161,7 +205,15 @@ const Notifications: React.FC = () => {
                 } 0.4s ease-in forwards`,
             ...data.style,
           }}
-          className={`${classes.container}`}
+          className={
+            data.type === 'error'
+              ? classes.containerRed
+              : data.type === 'success'
+              ? classes.containerGreen
+              : data.type === 'warning'
+              ? classes.containerYellow
+              : classes.container
+          }
         >
           <Group noWrap spacing={12}>
             {data.icon && (
