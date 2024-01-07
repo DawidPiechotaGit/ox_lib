@@ -10,7 +10,8 @@ import MarkdownComponents from '../../config/MarkdownComponents';
 
 const useStyles = createStyles((theme) => ({
   contentStack: {
-    color: theme.colors.dark[2],
+    // color: theme.colors.dark[2],
+    color: 'white',
   },
 }));
 

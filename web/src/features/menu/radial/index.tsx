@@ -13,13 +13,13 @@ const useStyles = createStyles((theme) => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
+    fontFamily: 'Teko',
   },
   sector: {
-    fill: theme.colors.dark[6],
-    color: theme.colors.dark[0],
-
+    fill: '#36495ed0',
+    color: '#fff',
     '&:hover': {
-      fill: theme.fn.primaryColor(),
+      fill: '#1a1f24d0',
       '> g > text, > g > svg > path': {
         fill: '#fff',
       },
@@ -32,12 +32,12 @@ const useStyles = createStyles((theme) => ({
     fill: theme.colors.dark[6],
   },
   centerCircle: {
-    fill: theme.fn.primaryColor(),
+    fill: '#36495ed0',
     color: '#fff',
     stroke: theme.colors.dark[6],
-    strokeWidth: 4,
+    strokeWidth: 2,
     '&:hover': {
-      fill: theme.colors[theme.primaryColor][theme.fn.primaryShade() - 1],
+      fill: '#1a1f24d0',
     },
   },
   centerIconContainer: {

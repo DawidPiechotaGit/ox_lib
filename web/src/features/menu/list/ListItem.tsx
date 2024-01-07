@@ -15,13 +15,13 @@ interface Props {
 
 const useStyles = createStyles((theme, params: { iconColor?: string }) => ({
   buttonContainer: {
-    backgroundColor: theme.colors.dark[6],
-    borderRadius: theme.radius.md,
+    background: 'linear-gradient( 109deg, #1a1f24d0 25%, #36495ed0 75%)',
+    borderRadius: theme.radius.sm,
     padding: 2,
     height: 60,
     scrollMargin: 8,
     '&:focus': {
-      backgroundColor: theme.colors.dark[4],
+      backgroundColor: theme.colors.dark[8],
       outline: 'none',
     },
   },
@@ -41,30 +41,32 @@ const useStyles = createStyles((theme, params: { iconColor?: string }) => ({
   },
   icon: {
     fontSize: 24,
-    color: params.iconColor || theme.colors.dark[2],
+    color: 'white',
   },
   label: {
-    color: theme.colors.dark[2],
+    color: 'white',
     textTransform: 'uppercase',
     fontSize: 12,
     verticalAlign: 'middle',
   },
   chevronIcon: {
     fontSize: 14,
-    color: theme.colors.dark[2],
+    color: 'white',
   },
   scrollIndexValue: {
-    color: theme.colors.dark[2],
+    color: 'white',
     textTransform: 'uppercase',
     fontSize: 14,
   },
   progressStack: {
     width: '100%',
     marginRight: 5,
+    color: 'white',
   },
   progressLabel: {
     verticalAlign: 'middle',
     marginBottom: 3,
+    color: 'white',
   },
 }));
 

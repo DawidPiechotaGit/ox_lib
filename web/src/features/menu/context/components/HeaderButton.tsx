@@ -11,7 +11,7 @@ interface Props {
 
 const useStyles = createStyles((theme, params: { canClose?: boolean }) => ({
   button: {
-    borderRadius: 0,
+    borderRadius: theme.radius.sm,
     flex: '1 15%',
     alignSelf: 'stretch',
     height: 'auto',
@@ -19,12 +19,14 @@ const useStyles = createStyles((theme, params: { canClose?: boolean }) => ({
     justifyContent: 'center',
     padding: 2,
     background: `radial-gradient(#36495ed0, #1a1f24d0);`,
+    // background: 'linear-gradient( 109deg, #1a1f24d0 25%, #36495ed0 75%)',
   },
   root: {
     border: 'none',
   },
   label: {
-    color: params.canClose === false ? theme.colors.dark[2] : theme.colors.dark[0],
+    // color: params.canClose === false ? theme.colors.dark[2] : theme.colors.dark[0],
+    color: 'white',
   },
 }));
 

@@ -21,15 +21,18 @@ const useStyles = createStyles((theme, params: { disabled?: boolean; readOnly?: 
   },
   label: {
     width: '100%',
-    color: params.disabled ? theme.colors.dark[3] : theme.colors.dark[0],
+    color: '#fff',
     whiteSpace: 'pre-wrap',
+    letterSpacing: '0.04em',
   },
   button: {
     height: 'fit-content',
     width: '100%',
     padding: 10,
-    borderRadius: 0,
-    background: `radial-gradient(#36495ed0, #1a1f24d0);`,
+    borderRadius: theme.radius.sm,
+    fontWeight: 400,
+    // background: `radial-gradient(#36495ed0, #1a1f24d0);`,
+    background: 'linear-gradient( 109deg, #1a1f24d0 25%, #36495ed0 75%)',
     '&:hover': {
       backgroundColor: params.readOnly ? theme.colors.dark[6] : undefined,
       cursor: params.readOnly ? 'unset' : 'pointer',
@@ -42,16 +45,17 @@ const useStyles = createStyles((theme, params: { disabled?: boolean; readOnly?: 
     maxWidth: '25px',
   },
   description: {
-    color: params.disabled ? theme.colors.dark[3] : theme.colors.dark[2],
+    // color: params.disabled ? theme.colors.dark[3] : theme.colors.dark[2],
+    color: 'white',
     fontSize: 12,
-    fontFamily: 'Rajdhani',
+    fontFamily: 'Teko',
   },
   dropdown: {
     padding: 10,
     color: theme.colors.dark[0],
     fontSize: 14,
     maxWidth: 256,
-    fontFamily: 'Rajdhani',
+    fontFamily: 'Teko',
     width: 'fit-content',
     border: 'none',
   },
@@ -71,7 +75,7 @@ const useStyles = createStyles((theme, params: { disabled?: boolean; readOnly?: 
   },
   buttonTitleText: {
     overflowWrap: 'break-word',
-    fontFamily: 'Rajdhani',
+    fontFamily: 'Teko',
   },
   buttonArrowContainer: {
     justifyContent: 'center',
