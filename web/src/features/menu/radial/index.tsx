@@ -16,12 +16,14 @@ const useStyles = createStyles((theme) => ({
     fontFamily: 'Teko',
   },
   sector: {
-    fill: '#36495ed0',
+    fill: '#223c4d50',
     color: '#fff',
+    stroke: '#19abca30',
+    strokeWidth: 2,
     '&:hover': {
-      fill: '#1a1f24d0',
+      fill: '#223c4d90',
       '> g > text, > g > svg > path': {
-        fill: '#fff',
+        fill: '#19abca',
       },
     },
     '> g > text': {
@@ -29,15 +31,16 @@ const useStyles = createStyles((theme) => ({
     },
   },
   backgroundCircle: {
-    fill: theme.colors.dark[6],
+    filter: 'drop-shadow(0px 0px 15px rgb(25 171 202/ 1))',
+    fill: '#324b5c95',
   },
   centerCircle: {
-    fill: '#36495ed0',
+    fill: '#167d94',
     color: '#fff',
-    stroke: theme.colors.dark[6],
+    stroke: '#19abca',
     strokeWidth: 2,
     '&:hover': {
-      fill: '#1a1f24d0',
+      fill: '#223c4d90',
     },
   },
   centerIconContainer: {
@@ -120,14 +123,14 @@ const RadialMenu: React.FC = () => {
           <svg width="350px" height="350px" transform="rotate(90)">
             {/*Fixed issues with background circle extending the circle when there's less than 3 items*/}
             <g transform="translate(175, 175)">
-              <circle r={175} className={classes.backgroundCircle} />
+              <circle r={155} className={classes.backgroundCircle} />
             </g>
             {menuItems.map((item, index) => {
               // Always draw full circle to avoid elipse circles with 2 or less items
               const pieAngle = 360 / (menuItems.length < 3 ? 3 : menuItems.length);
               const angle = degToRad(pieAngle / 2 + 90);
               const gap = 0;
-              const radius = 175 * 0.65 - gap;
+              const radius = 155 * 0.65 - gap;
               const sinAngle = Math.sin(angle);
               const cosAngle = Math.cos(angle);
               const iconX = 175 + sinAngle * radius;
@@ -148,9 +151,9 @@ const RadialMenu: React.FC = () => {
                     }}
                   >
                     <path
-                      d={`M175.01,175.01 l${175 - gap},0 A175.01,175.01 0 0,0 ${
-                        175 + (175 - gap) * Math.cos(-degToRad(pieAngle))
-                      }, ${175 + (175 - gap) * Math.sin(-degToRad(pieAngle))} z`}
+                      d={`M175.01,175.01 l${155 - gap},0 A175.01,155.01 0 0,0 ${
+                        175 + (155 - gap) * Math.cos(-degToRad(pieAngle))
+                      }, ${175 + (155 - gap) * Math.sin(-degToRad(pieAngle))} z`}
                     />
                     <g transform={`rotate(${index * pieAngle - 90} ${iconX} ${iconY})`} pointerEvents="none">
                       <LibIcon x={iconX - 12.5} y={iconY - 17.5} icon={item.icon} width={25} height={25} fixedWidth />
@@ -187,7 +190,7 @@ const RadialMenu: React.FC = () => {
                 }
               }}
             >
-              <circle r={32} className={classes.centerCircle} />
+              <circle r={28} className={classes.centerCircle} />
             </g>
           </svg>
           <div className={classes.centerIconContainer}>
