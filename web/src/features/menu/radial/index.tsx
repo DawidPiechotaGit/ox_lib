@@ -16,9 +16,9 @@ const useStyles = createStyles((theme) => ({
     fontFamily: 'Teko',
   },
   sector: {
-    fill: '#223c4d50',
+    fill: '#1F2D3A90',
     color: '#fff',
-    stroke: '#19abca30',
+    stroke: '#19abca00',
     strokeWidth: 2,
     '&:hover': {
       fill: '#223c4d90',
@@ -31,13 +31,13 @@ const useStyles = createStyles((theme) => ({
     },
   },
   backgroundCircle: {
-    filter: 'drop-shadow(0px 0px 15px rgb(25 171 202/ 1))',
+    filter: 'drop-shadow(0px 0px 12px #9BD7FD)',
     fill: '#324b5c95',
   },
   centerCircle: {
-    fill: '#167d94',
+    fill: '#1F2D3A99',
     color: '#fff',
-    stroke: '#19abca',
+    stroke: '#1F2D3A90',
     strokeWidth: 2,
     '&:hover': {
       fill: '#223c4d90',
@@ -151,7 +151,7 @@ const RadialMenu: React.FC = () => {
                     }}
                   >
                     <path
-                      d={`M175.01,175.01 l${155 - gap},0 A175.01,155.01 0 0,0 ${
+                      d={`M175.01,175.01 l${155 - gap},0 A155.01,155.01 0 0,0 ${
                         175 + (155 - gap) * Math.cos(-degToRad(pieAngle))
                       }, ${175 + (155 - gap) * Math.sin(-degToRad(pieAngle))} z`}
                     />

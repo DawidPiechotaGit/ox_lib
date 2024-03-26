@@ -20,9 +20,10 @@ const useStyles = createStyles((theme, params: { iconColor?: string }) => ({
     padding: 2,
     height: 60,
     scrollMargin: 8,
+    color: '#19abca',
     '&:focus': {
-      backgroundColor: theme.colors.dark[8],
-      outline: 'none',
+      backgroundColor: '#1a1f24d0',
+      outline: 'solid 1px #19abca',
     },
   },
   iconImage: {
@@ -62,11 +63,13 @@ const useStyles = createStyles((theme, params: { iconColor?: string }) => ({
     width: '100%',
     marginRight: 5,
     color: 'white',
+    transform: 'skew(-15deg)',
   },
   progressLabel: {
     verticalAlign: 'middle',
     marginBottom: 3,
     color: 'white',
+    transform: 'skew(15deg)',
   },
 }));
 

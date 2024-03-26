@@ -53,7 +53,7 @@ export const debugCustomNotification = () => {
       action: 'notify',
       data: {
         // title: 'Custom icon success',
-        description: 'You recieved keys to the vehicle',
+        description: 'You recieved keys to the vehicle to the to the',
         type: '',
         icon: 'microchip',
         duration: 200000,
