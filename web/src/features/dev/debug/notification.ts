@@ -81,6 +81,7 @@ export const debugCustomNotification = () => {
         type: 'error',
         icon: 'microchip',
         duration: 200000,
+        showDuration: false,
       },
     },
   ]);
