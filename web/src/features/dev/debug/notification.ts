@@ -10,6 +10,7 @@ export const debugCustomNotification = () => {
         description: 'Notification description',
         type: 'error',
         duration: 200000,
+        showDuration: true,
       },
     },
   ]);
@@ -21,6 +22,7 @@ export const debugCustomNotification = () => {
         description: 'Notification description',
         type: 'warning',
         duration: 200000,
+        showDuration: true,
       },
     },
   ]);
@@ -33,6 +35,7 @@ export const debugCustomNotification = () => {
         type: 'success',
         icon: 'microchip',
         duration: 200000,
+        showDuration: true,
       },
     },
   ]);
@@ -45,6 +48,7 @@ export const debugCustomNotification = () => {
         type: 'inform',
         icon: 'microchip',
         duration: 200000,
+        showDuration: true,
       },
     },
   ]);
@@ -57,6 +61,7 @@ export const debugCustomNotification = () => {
         type: '',
         icon: 'microchip',
         duration: 200000,
+        showDuration: true,
       },
     },
   ]);
@@ -69,6 +74,7 @@ export const debugCustomNotification = () => {
         type: 'success',
         icon: 'microchip',
         duration: 200000,
+        showDuration: true,
       },
     },
   ]);
@@ -81,7 +87,7 @@ export const debugCustomNotification = () => {
         type: 'error',
         icon: 'microchip',
         duration: 200000,
-        showDuration: false,
+        showDuration: true,
       },
     },
   ]);

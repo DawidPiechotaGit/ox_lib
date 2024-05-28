@@ -15,10 +15,10 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: 'rgba(0, 99, 160, 0.13)',
     // background: `radial-gradient(#36495ed0, #1a1f24d0);`,
     // background: 'linear-gradient( 109deg, #1a1f24d0 30%, #36495ed0 75%)',
-    // background: 'radial-gradient(circle, rgba(12,30,42,0.8743872549019608) 3%, rgba(11,39,53,0.9108018207282913) 81%)',
-    background: 'linear-gradient(0deg, rgba(48,101,131,1) 4%, rgba(33,37,41,1) 5%)',
+    background: 'radial-gradient(circle, rgba(12,30,42,0.8743872549019608) 3%, rgba(11,39,53,0.9108018207282913) 81%)',
+    // background: 'linear-gradient(0deg, rgba(48,101,131,1) 4%, rgba(33,37,41,1) 5%)',
     // -webkit-clip-path: polygon(0 0,calc(100% - 32px) 0,100% 60%,100% 100%,0 100%,0 50%);
-    clipPath: 'polygon(0 0,calc(100% - 42px) 0,100% 90%,100% 100%,0 100%,0 50%)',
+    // clipPath: 'polygon(0 0,calc(100% - 42px) 0,100% 90%,100% 100%,0 100%,0 50%)',
     // background:
     //   'radial-gradient(circle, rgba(36,155,200,0.4547794117647058) 5%, rgba(36,155,200,0.3979166666666667) 95%)',
     // border: '2px solid #19abca',
@@ -36,9 +36,9 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: 'rgba(0, 99, 160, 0.13)',
     // background: `radial-gradient(#36495ed0, #1a1f24d0);`,
     // background: 'linear-gradient( 109deg, #1a1f24d0 30%, #36495ed0 75%)',
-    // background: 'radial-gradient(circle, rgba(12,42,37,0.8743872549019608) 3%, rgba(11,53,45,0.9108018207282913) 81%)',
-    background: 'linear-gradient(0deg, rgba(48,131,83,1) 4%, rgba(33,37,41,1) 5%)',
-    clipPath: 'polygon(0 0,calc(100% - 42px) 0,100% 90%,100% 100%,0 100%,0 50%)',
+    background: 'radial-gradient(circle, rgba(12,42,37,0.8743872549019608) 3%, rgba(11,53,45,0.9108018207282913) 81%)',
+    // background: 'linear-gradient(0deg, rgba(48,131,83,1) 4%, rgba(33,37,41,1) 5%)',
+    // clipPath: 'polygon(0 0,calc(100% - 42px) 0,100% 90%,100% 100%,0 100%,0 50%)',
     color: theme.colors.dark[0],
     padding: 10,
     borderRadius: theme.radius.sm,
@@ -50,10 +50,10 @@ const useStyles = createStyles((theme) => ({
   containerRed: {
     width: 300,
     height: 'fit-content',
-    backgroundColor: 'rgba(0, 99, 160, 0.13)',
-    // background: 'radial-gradient(circle, rgba(42,12,12,0.8743872549019608) 3%, rgba(53,11,11,0.9108018207282913) 81%)',
-    background: 'linear-gradient(0deg, rgba(83,6,6,1) 4%, rgba(33,37,41,1) 5%)',
-    clipPath: 'polygon(0 0,calc(100% - 42px) 0,100% 90%,100% 100%,0 100%,0 50%)',
+    // backgroundColor: 'rgba(0, 99, 160, 0.13)',
+    background: 'radial-gradient(circle, rgba(42,12,12,0.8743872549019608) 3%, rgba(53,11,11,0.9108018207282913) 81%)',
+    // background: 'linear-gradient(0deg, rgba(83,6,6,1) 4%, rgba(33,37,41,1) 5%)',
+    // clipPath: 'polygon(0 0,calc(100% - 42px) 0,100% 90%,100% 100%,0 100%,0 50%)',
     // background:
     //   'linear-gradient(135deg, rgba(83,6,6,1) 2%, rgba(139,33,33,1) 2%, rgba(139,33,33,1) 3%, rgba(83,6,6,1) 3%, rgba(83,6,6,1) 4%, rgba(139,33,33,1) 4%, rgba(139,33,33,1) 9%, rgba(83,6,6,1) 9%, rgba(83,6,6,1) 11%, rgba(15,17,28,1) 11%)',
     color: theme.colors.dark[0],
@@ -67,9 +67,10 @@ const useStyles = createStyles((theme) => ({
   containerWarning: {
     width: 300,
     height: 'fit-content',
-    backgroundColor: 'rgba(0, 99, 160, 0.13)',
-    background: 'linear-gradient(0deg, rgba(142,49,205,1) 4%, rgba(33,37,41,1) 5%)',
-    clipPath: 'polygon(0 0,calc(100% - 42px) 0,100% 90%,100% 100%,0 100%,0 50%)',
+    // backgroundColor: 'rgba(0, 99, 160, 0.13)',
+    // background: 'linear-gradient(0deg, rgba(142,49,205,1) 4%, rgba(33,37,41,1) 5%)',
+    background: 'radial-gradient(circle, rgba(73,32,75,0.91) 3%, rgba(45,17,41,0.91) 81%)',
+    // clipPath: 'polygon(0 0,calc(100% - 42px) 0,100% 90%,100% 100%,0 100%,0 50%)',
     color: theme.colors.dark[0],
     padding: 10,
     borderRadius: theme.radius.sm,
@@ -79,54 +80,54 @@ const useStyles = createStyles((theme) => ({
     // letterSpacing: '0.04em',
   },
   title: {
-    fontSize: 15,
+    fontSize: 12,
     fontFamily: 'Roboto',
     fontWeight: 400,
     lineHeight: 'normal',
-    // color: 'white',
-    color: '#19abca',
-    textShadow: '#19abca 1px 0 5px',
+    color: 'white',
+    // color: '#19abca',
+    // textShadow: '#19abca 1px 0 5px',
     marginRight: '15px',
   },
   titleGreen: {
-    fontSize: 15,
+    fontSize: 12,
     fontFamily: 'Roboto',
     fontWeight: 400,
     lineHeight: 'normal',
-    // color: 'white',
-    color: '#31B93A',
-    textShadow: '#31B93A 1px 0 5px',
+    color: 'white',
+    // color: '#31B93A',
+    // textShadow: '#31B93A 1px 0 5px',
     marginRight: '15px',
   },
   titleRed: {
-    fontSize: 15,
+    fontSize: 12,
     fontFamily: 'Roboto',
     fontWeight: 400,
     lineHeight: 'normal',
-    // color: 'white',
-    color: '#EE1010',
-    textShadow: '#EE1010 1px 0 5px',
+    color: 'white',
+    // color: '#EE1010',
+    // textShadow: '#EE1010 1px 0 5px',
     marginRight: '15px',
   },
   titleWarning: {
-    fontSize: 15,
+    fontSize: 12,
     fontFamily: 'Roboto',
     fontWeight: 400,
     lineHeight: 'normal',
-    // color: 'white',
-    color: '#8e31cd',
-    textShadow: '#8e31cd 1px 0 5px',
+    color: 'white',
+    // color: '#8e31cd',
+    // textShadow: '#8e31cd 1px 0 5px',
     marginRight: '15px',
   },
   description: {
-    fontSize: 12,
+    fontSize: 10,
     color: 'white',
     // fontFamily: 'Teko',
     fontFamily: 'Roboto',
     lineHeight: 'normal',
   },
   descriptionOnly: {
-    fontSize: 12,
+    fontSize: 10,
     color: 'white',
     // fontFamily: 'Teko',
     fontFamily: 'Roboto',
@@ -226,7 +227,7 @@ const Notifications: React.FC = () => {
           iconColor = 'teal.6';
           break;
         case 'warning':
-          iconColor = 'yellow.6';
+          iconColor = 'violet.6';
           break;
         default:
           iconColor = 'blue.6';
@@ -256,7 +257,7 @@ const Notifications: React.FC = () => {
           <Group noWrap spacing={12}>
             {data.icon && (
               <>
-                {!data.iconColor ? (
+                {/* {!data.iconColor ? (
                   <Avatar
                     color={
                       data.type === 'error'
@@ -266,7 +267,13 @@ const Notifications: React.FC = () => {
                         : data.type === 'warning'
                         ? 'violet'
                         : 'blue'
-                    }
+                    } */}
+                    {data.showDuration ? (
+                    <RingProgress
+                      key={toastKey}
+                      size={38}
+                      thickness={2}
+                      sections={[{ value: 100, color: iconColor }]}
                     style={{ alignSelf: !data.alignIcon || data.alignIcon === 'center' ? 'center' : 'start' }}
                     styles={{
                       root: {

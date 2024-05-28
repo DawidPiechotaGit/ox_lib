@@ -153,11 +153,17 @@ function lib.progressBar(data)
     while progress ~= nil do Wait(0) end
 
     if not interruptProgress(data) then
+        if exports['ps-buffs']:HasBuff("intelligence") then
+            local durationL = data.duration * 0.7
+        else
+            durationL = data.duration
+        end
         SendNUIMessage({
             action = 'progress',
             data = {
                 label = data.label,
-                duration = data.duration
+                duration = durationL
+                -- duration = data.duration
             }
         })
 
@@ -171,10 +177,16 @@ function lib.progressCircle(data)
     while progress ~= nil do Wait(0) end
 
     if not interruptProgress(data) then
+        if exports['ps-buffs']:HasBuff("intelligence") then
+            local durationL = data.duration * 0.7
+        else
+            durationL = data.duration
+        end
         SendNUIMessage({
             action = 'circleProgress',
             data = {
-                duration = data.duration,
+                -- duration = data.duration,
+                duration = durationL
                 position = data.position,
                 label = data.label
             }
