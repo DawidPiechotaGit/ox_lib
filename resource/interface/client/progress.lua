@@ -162,7 +162,7 @@ function lib.progressBar(data)
             action = 'progress',
             data = {
                 label = data.label,
-                duration = durationL
+                duration = durationL,
                 -- duration = data.duration
             }
         })
@@ -186,7 +186,7 @@ function lib.progressCircle(data)
             action = 'circleProgress',
             data = {
                 -- duration = data.duration,
-                duration = durationL
+                duration = durationL,
                 position = data.position,
                 label = data.label
             }
