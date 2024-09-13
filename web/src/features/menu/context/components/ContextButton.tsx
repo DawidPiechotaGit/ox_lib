@@ -48,14 +48,16 @@ const useStyles = createStyles((theme, params: { disabled?: boolean; readOnly?: 
     // color: params.disabled ? theme.colors.dark[3] : theme.colors.dark[2],
     color: 'white',
     fontSize: 12,
-    fontFamily: 'Teko',
+    //fontFamily: 'Red Hat Display',
+    fontFamily: 'Geist',
   },
   dropdown: {
     padding: 10,
     color: theme.colors.dark[0],
     fontSize: 14,
     maxWidth: 256,
-    fontFamily: 'Teko',
+    //fontFamily: 'Red Hat Display',
+    fontFamily: 'Geist',
     width: 'fit-content',
     border: 'none',
   },
@@ -75,7 +77,8 @@ const useStyles = createStyles((theme, params: { disabled?: boolean; readOnly?: 
   },
   buttonTitleText: {
     overflowWrap: 'break-word',
-    fontFamily: 'Teko',
+    //fontFamily: 'Red Hat Display',
+    fontFamily: 'Geist',
   },
   buttonArrowContainer: {
     justifyContent: 'center',

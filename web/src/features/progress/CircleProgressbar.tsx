@@ -34,7 +34,8 @@ const useStyles = createStyles((theme, params: { position: 'middle' | 'bottom'; 
   },
   value: {
     textAlign: 'center',
-    fontFamily: 'Teko',
+    //fontFamily: 'Red Hat Display',
+    fontFamily: 'Geist',
     textShadow: theme.shadows.sm,
     color: theme.colors.gray[3],
   },

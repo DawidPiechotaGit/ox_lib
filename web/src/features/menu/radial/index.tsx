@@ -15,7 +15,8 @@ const useStyles = createStyles((theme) => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    fontFamily: 'Teko',
+    //fontFamily: 'Red Hat Display',
+    fontFamily: 'Geist',
   },
   sector: {
     fill: '#1F2D3A90',

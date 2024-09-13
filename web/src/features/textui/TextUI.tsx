@@ -27,12 +27,15 @@ const useStyles = createStyles((theme, params: { position?: TextUiPosition }) =>
     margin: 8,
     // background: `radial-gradient(#36495ed0, #1a1f24d0);`,
     color: 'white',
-    fontFamily: 'Teko',
-    fontWeight: 400,
+    //fontFamily: 'Red Hat Display',
+    fontFamily: 'Geist',
+    fontWeight: 700,
     borderRadius: '4px',
-    boxShadow: theme.shadows.sm,
-    letterSpacing: '0.04em',
-    background: 'linear-gradient( 109deg, #1a1f24d0 30%, #36495ed0 75%)',
+    textShadow: '2px 2px 4px black',
+    textTransform: 'uppercase',
+    // boxShadow: theme.shadows.sm,
+    // letterSpacing: '0.04em',
+    // background: 'linear-gradient( 109deg, #1a1f24d0 30%, #36495ed0 75%)',
     // background: 'linear-gradient(90deg, rgba(52,174,203,1) 0%, rgba(52,174,203,1) 2%, rgba(26,51,64,1) 2%)',
   },
 }));
@@ -66,8 +69,13 @@ const TextUI: React.FC = () => {
                   size="lg"
                   animation={data.iconAnimation}
                   style={{
-                    color: data.iconColor,
+                    color: '#243c6b',
                     alignSelf: !data.alignIcon || data.alignIcon === 'center' ? 'center' : 'start',
+                    backgroundImage: 'linear-gradient(to top, rgb(72 198 239 / 71%) 0%, rgb(111 134 214 / 72%) 100%)',
+                    boxShadow: '0px 0px 15px #19abca',
+                    padding: '10px',
+                    borderRadius: '5px',
+                    border: '1px solid #19abca'
                   }}
                 />
               )}
